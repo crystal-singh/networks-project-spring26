@@ -1,0 +1,15 @@
+## 1. Which city has the highest inefficiency ratio? Look it up on [submarinecablemap.com](https://submarinecablemap.com) — what cables serve it and how does that explain your result?
+
+The city with the highest inefficiency ratio in my results is Johannesburg (ratio ≈ 14.89), followed closely by New Delhi and Sendai. These values are far above the theoretical minimum and indicate significant additional delay beyond propagation. Looking at submarine cable infrastructure, Johannesburg and Africa in general are served by cables such as ACE (Africa Coast to Europe), Equiano, and GLO-1, many of which connect Africa to Europe rather than directly to other regions. Because of this structure, traffic from Africa often must travel north to Europe and then route to its final destination. This indirect routing increases total path length and latency, which helps explain the very high inefficiency ratios observed for Johannesburg and other African locations.
+
+---
+
+## 2. Which city is closest to the theoretical minimum? What does that tell you about routing infrastructure there?
+
+The city closest to the theoretical minimum is Sydney (ratio ≈ 1.50), followed closely by Seoul and Singapore. This indicates that the network path is relatively efficient, routing is closer to a straight-line (great-circle) path, and the infrastructure is well-optimized. These regions are served by modern, high-capacity submarine cable systems and major global internet hubs. Many large providers, like Google, deploy content delivery networks and optimized routing in Asia-Pacific regions, which reduces latency. A ratio close to 1.5 suggests that the majority of delay is due to physical propagation, and there is relatively little additional overhead from routing inefficiencies.
+
+---
+
+## 3. Your packet to Lagos almost certainly routes through Europe first. Why does Africa route through Europe, and what would need to change to fix it?
+
+Packets to Lagos often route through Europe because Africa’s internet infrastructure is historically structured around connections to Europe rather than direct intercontinental links. Most major submarine cables serving West Africa terminate in European countries and are designed to connect Africa to Europe first. As a result, even traffic from the United States to Lagos may follow a path like Boston to Europe to Lagos instead of a direct transatlantic route. This happens because Europe is a major global internet hub with dense interconnections, there are fewer direct cables between Africa and other regions, and historical investment prioritized Europe-Africa connectivity. To reduce this inefficiency, there would need to be more direct submarine cables between Africa and other continents, increased intra-African connectivity, and expansion of local data centers and IXPs.
